@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hasass Naturals — Premium Ghanaian Products</title>
+<meta name="description" content="Premium raw shea butter, Hasass Bleach and organic Sobolo. Handmade in Darkuman, Accra, Ghana. Order online via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--g1:#0a1f0c;--g2:#122917;--g3:#1e4025;--gold:#d4a017;--gold2:#f0c040;--gold3:#fff8e1;
+--cream:#faf6ed;--text:#0d1a0e;--muted:#4a5c3a;--white:#ffffff;
+}
+body{font-family:'Outfit',sans-serif;background:var(--g1);color:var(--white);overflow-x:hidden}
+
+nav{background:rgba(10,31,12,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(212,160,23,0.25);position:sticky;top:0;z-index:200}
+.nav-logo-ring{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1e4025,#0a1f0c)}
+.nav-logo-ring span{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--gold);letter-spacing:1px}
+.brand-text{margin-left:10px;font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--white);letter-spacing:.5px}
+.brand-text em{color:var(--gold);font-style:normal}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;margin:0 .9rem;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.cart-pill{background:linear-gradient(135deg,var(--gold2),#b8860b);color:var(--g1);border:none;padding:9px 20px;border-radius:30px;font-weight:600;cursor:pointer;font-size:.85rem;font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:7px;transition:opacity .2s;box-shadow:0 4px 20px rgba(212,160,23,0.35)}
+.cart-pill:hover{opacity:.9}
+.cnt{background:var(--g1);color:var(--gold);border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+
+.hero{min-height:600px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:5rem 2rem}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,#1e4025 0%,#0a1f0c 70%)}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.orb1{width:500px;height:500px;background:rgba(212,160,23,0.08);top:-100px;left:-100px}
+.orb2{width:400px;height:400px;background:rgba(30,64,37,0.6);bottom:-80px;right:-80px}
+.orb3{width:300px;height:300px;background:rgba(212,160,23,0.05);bottom:20%;left:30%}
+.hero-content{position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(212,160,23,0.12);border:1px solid rgba(212,160,23,0.35);color:var(--gold);padding:6px 18px;border-radius:30px;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem}
+.hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;display:inline-block}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:4.5rem;font-weight:700;line-height:1.0;letter-spacing:-1px;margin-bottom:1.2rem;background:linear-gradient(180deg,#fff8dc 0%,#f0c040 35%,#d4a017 65%,#a87800 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:1.05rem;color:rgba(255,255,255,0.65);max-width:500px;margin:0 auto 2.2rem;line-height:1.8;font-weight:300}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--g1);border:none;padding:15px 36px;border-radius:50px;font-weight:700;cursor:pointer;font-size:.95rem;font-family:'Outfit',sans-serif;box-shadow:0 8px 30px rgba(212,160,23,0.4),0 0 0 1px rgba(212,160,23,0.3);transition:all .25s;letter-spacing:.3px}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(212,160,23,0.5)}
+.btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.3);padding:15px 36px;border-radius:50px;font-weight:400;cursor:pointer;font-size:.95rem;font-family:'Outfit',sans-serif;transition:all .25s;letter-spacing:.3px}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.trust-strip{display:flex;justify-content:center;gap:2.5rem;margin-top:3rem;flex-wrap:wrap}
+.trust-chip{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.55);font-size:.82rem}
+.chip-dot{width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0}
+
+.products-section{padding:5rem 2rem;max-width:1200px;margin:0 auto}
+.sec-label{color:var(--gold);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:.5rem}
+.sec-h{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--white);margin-bottom:.4rem;line-height:1.1}
+.sec-p{color:rgba(255,255,255,0.5);font-size:.92rem;margin-bottom:3rem;font-weight:300}
+
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+
+.pcard{border-radius:20px;overflow:hidden;position:relative;background:linear-gradient(160deg,rgba(30,64,37,0.7),rgba(10,31,12,0.9));border:1px solid rgba(212,160,23,0.15);transition:transform .35s,box-shadow .35s;cursor:pointer}
+.pcard:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 30px 60px rgba(0,0,0,0.5),0 0 0 1px rgba(212,160,23,0.3)}
+.pcard-imgs{height:240px;position:relative;overflow:hidden}
+.img-mosaic{display:grid;width:100%;height:100%}
+.img-mosaic.two{grid-template-columns:1fr 1fr}
+.img-mosaic.three{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr}
+.img-mosaic.four{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.mosaic-cell{overflow:hidden;position:relative}
+.mosaic-cell.span2{grid-row:1/-1}
+.mosaic-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.pcard:hover .mosaic-cell img{transform:scale(1.07)}
+.mosaic-cell::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,31,12,0.1),rgba(10,31,12,0.3))}
+.pcard-badge{position:absolute;top:12px;right:12px;z-index:3;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--g1);font-size:.65rem;font-weight:700;padding:5px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:.8px}
+.pcard-glow{position:absolute;inset:0;z-index:1;pointer-events:none}
+.shea-glow{background:radial-gradient(ellipse 80% 40% at 50% 100%,rgba(212,160,23,0.22),transparent)}
+.bleach-glow{background:radial-gradient(ellipse 80% 40% at 50% 100%,rgba(100,180,255,0.15),transparent)}
+.sobolo-glow{background:radial-gradient(ellipse 80% 40% at 50% 100%,rgba(180,40,80,0.2),transparent)}
+
+.pcard-body{padding:1.5rem;position:relative;z-index:2}
+.pcard-name{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;color:var(--white);margin-bottom:.35rem}
+.pcard-desc{color:rgba(255,255,255,0.55);font-size:.83rem;line-height:1.7;margin-bottom:1rem;font-weight:300}
+.pcard-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1.2rem}
+.ptag{background:rgba(212,160,23,0.12);border:1px solid rgba(212,160,23,0.25);color:var(--gold);padding:3px 10px;border-radius:20px;font-size:.72rem;font-weight:500;letter-spacing:.3px}
+.pcard-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.07);padding-top:1rem}
+.pcard-price{font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(255,255,255,0.5)}
+.pcard-price span{display:block;color:var(--gold2);font-size:1.2rem;font-weight:600;font-family:'Outfit',sans-serif}
+.add-ring{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--g1);font-size:1.4rem;font-weight:700;box-shadow:0 4px 16px rgba(212,160,23,0.35);transition:all .2s;flex-shrink:0}
+.add-ring:hover{transform:scale(1.12);box-shadow:0 6px 24px rgba(212,160,23,0.5)}
+.qty-row{display:flex;align-items:center;gap:8px}
+.qty-b{width:30px;height:30px;border:1px solid rgba(212,160,23,0.4);background:rgba(212,160,23,0.1);color:var(--gold);border-radius:8px;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.qty-b:hover{background:rgba(212,160,23,0.2)}
+.qty-v{color:var(--white);font-weight:600;min-width:22px;text-align:center}
+
+.divider-bar{height:1px;background:linear-gradient(90deg,transparent,rgba(212,160,23,0.4),transparent);margin:0 2rem}
+
+.steps-section{padding:4rem 2rem;text-align:center;background:linear-gradient(180deg,var(--g1),var(--g2))}
+.steps-inner{max-width:900px;margin:0 auto}
+.steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.step-card{background:rgba(255,255,255,0.04);border:1px solid rgba(212,160,23,0.12);border-radius:16px;padding:2rem 1.2rem;transition:border-color .2s}
+.step-card:hover{border-color:rgba(212,160,23,0.35)}
+.step-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--g1);font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 4px 20px rgba(212,160,23,0.3)}
+.step-card h3{color:var(--white);font-size:.95rem;font-weight:500;margin-bottom:.5rem}
+.step-card p{color:rgba(255,255,255,0.45);font-size:.82rem;line-height:1.7;font-weight:300}
+
+.order-wrap{padding:4rem 2rem;max-width:900px;margin:0 auto}
+.order-box{background:linear-gradient(160deg,rgba(30,64,37,0.5),rgba(10,31,12,0.8));border:1px solid rgba(212,160,23,0.2);border-radius:24px;padding:2.5rem;backdrop-filter:blur(10px)}
+.order-box h2{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--white);margin-bottom:.3rem}
+.order-box .sub{color:rgba(255,255,255,0.45);font-size:.88rem;margin-bottom:2rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg.full{grid-column:1/-1}
+.fg label{font-size:.78rem;font-weight:500;color:rgba(212,160,23,0.8);text-transform:uppercase;letter-spacing:.8px}
+.fg input,.fg select,.fg textarea{background:rgba(255,255,255,0.05);border:1px solid rgba(212,160,23,0.2);border-radius:10px;padding:12px 14px;color:var(--white);font-family:'Outfit',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s}
+.fg input::placeholder{color:rgba(255,255,255,0.25)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(212,160,23,0.6)}
+.fg select option{background:#0a1f0c;color:#fff}
+.fg textarea{resize:vertical;min-height:80px}
+.cart-summary-box{grid-column:1/-1;background:rgba(212,160,23,0.07);border:1px solid rgba(212,160,23,0.2);border-radius:12px;padding:1.2rem}
+.cs-title{color:var(--gold);font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:.75rem}
+.ci{display:flex;justify-content:space-between;font-size:.88rem;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.7)}
+.ci:last-child{border-bottom:none;font-weight:600;color:var(--gold2);padding-top:8px}
+.empty-note{color:rgba(255,255,255,0.3);font-size:.83rem;text-align:center;padding:.8rem 0}
+.submit-gold{grid-column:1/-1;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--g1);border:none;padding:18px;border-radius:12px;font-size:1rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;letter-spacing:.5px;box-shadow:0 6px 30px rgba(212,160,23,0.35);transition:all .25s}
+.submit-gold:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(212,160,23,0.5)}
+.success-card{grid-column:1/-1;background:rgba(30,100,40,0.3);border:1px solid rgba(80,180,80,0.4);border-radius:12px;padding:1.5rem;text-align:center;display:none}
+.success-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#90ee90;margin-bottom:.3rem}
+.success-card p{color:rgba(255,255,255,0.6);font-size:.88rem}
+
+.contact-footer{background:linear-gradient(180deg,var(--g2),#060f07);padding:3rem 2rem;border-top:1px solid rgba(212,160,23,0.15)}
+.cf-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem}
+.cf-col h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);margin-bottom:.75rem}
+.cf-col p,.cf-col a{color:rgba(255,255,255,0.45);font-size:.85rem;line-height:1.9;text-decoration:none;display:block}
+.cf-col a:hover{color:var(--gold)}
+.bottom-bar{text-align:center;padding:1.2rem;border-top:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.25);font-size:.8rem}
+.bottom-bar strong{color:var(--gold)}
+
+@media(max-width:900px){.prod-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){
+  .prod-grid{grid-template-columns:1fr}
+  .steps-row{grid-template-columns:1fr 1fr}
+  .form-grid{grid-template-columns:1fr}
+  .fg.full{grid-column:1}
+  .cart-summary-box{grid-column:1}
+  .submit-gold{grid-column:1}
+  .success-card{grid-column:1}
+  .hero h1{font-size:2.8rem}
+  .nav-links{display:none}
+  nav{padding:.8rem 1.2rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div style="display:flex;align-items:center">
+    <div class="nav-logo-ring"><span>HN</span></div>
+    <div class="brand-text">Hasass <em>Naturals</em></div>
+  </div>
+  <div class="nav-links">
+    <a onclick="goTo('products')">Products</a>
+    <a onclick="goTo('order')">Order</a>
+    <a onclick="goTo('contact')">Contact</a>
+  </div>
+  <button class="cart-pill" onclick="goTo('order')">
+    🛒 Cart <span class="cnt" id="cartCount">0</span>
+  </button>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-orb orb3"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">🇬🇭 Proudly Made in Ghana</div>
+    <h1>Nature's Finest,<br>Crafted by Hand</h1>
+    <p>Premium raw shea butter, powerful Hasass Bleach &amp; organic Sobolo — straight from Darkuman, Accra to you.</p>
+    <div class="hero-ctas">
+      <button class="btn-gold" onclick="goTo('products')">Shop Collection</button>
+      <button class="btn-ghost" onclick="goTo('order')">Bulk Orders</button>
+    </div>
+    <div class="trust-strip">
+      <div class="trust-chip"><div class="chip-dot"></div>100% Raw &amp; Unrefined</div>
+      <div class="trust-chip"><div class="chip-dot"></div>Superior Quality</div>
+      <div class="trust-chip"><div class="chip-dot"></div>Bulk Orders Welcome</div>
+      <div class="trust-chip"><div class="chip-dot"></div>WhatsApp Ordering</div>
+    </div>
+  </div>
+</div>
+
+<div class="products-section" id="products">
+  <div class="sec-label">Our Collection</div>
+  <h2 class="sec-h">Handmade with Love</h2>
+  <p class="sec-p">Every product crafted for quality — for your skin, your home, your health.</p>
+
+  <div class="prod-grid">
+
+    <div class="pcard">
+      <div class="pcard-imgs">
+        <div class="img-mosaic three">
+          <div class="mosaic-cell span2">
+            <img src="https://i.ibb.co/CKB3TPRv/8c4093b4-0bb4-4741-bbb0-c6e54a40dee2.jpg" alt="Shea butter cream in bowl">
+          </div>
+          <div class="mosaic-cell">
+            <img src="https://i.ibb.co/ksXwPYjN/130ad92f-c3b2-4795-8d95-3dfd0381017d.jpg" alt="Raw shea nuts">
+          </div>
+          <div class="mosaic-cell">
+            <img src="https://i.ibb.co/2Y3Fj0K4/f2bbb2ec-545d-49e7-88bf-651a80bc3142.jpg" alt="Natural skincare">
+          </div>
+        </div>
+        <div class="pcard-glow shea-glow"></div>
+        <div class="pcard-badge">Best Seller</div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">Premium Shea Butter</div>
+        <div class="pcard-desc">100% raw, natural unrefined shea butter. Handmade for superior skin &amp; hair health. No additives, no chemicals — pure nature.</div>
+        <div class="pcard-tags">
+          <span class="ptag">100% Raw</span><span class="ptag">Unrefined</span><span class="ptag">Skin &amp; Hair</span><span class="ptag">Handmade</span>
+        </div>
+        <div class="pcard-footer">
+          <div class="pcard-price">Starting from<span>Contact Us</span></div>
+          <div id="sheaCtrl"><button class="add-ring" onclick="add('shea')">+</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-imgs">
+        <div class="img-mosaic four">
+          <div class="mosaic-cell">
+            <img src="https://i.ibb.co/7MkCB3p/3f988781-bbe4-444d-a4fe-080a8ec62a40.jpg" alt="Cleaning products">
+          </div>
+          <div class="mosaic-cell">
+            <img src="https://i.ibb.co/tMWTPLp2/7e269c62-59aa-4e47-8762-07819251a689.jpg" alt="Sparkling clean home">
+          </div>
+          <div class="mosaic-cell">
+            <img src="https://i.ibb.co/Ld58ZWMJ/7927619b-71d3-49cc-bda7-eb1d6741937f.jpg" alt="White clean surface">
+          </div>
+          <div class="mosaic-cell">
+            <img src="https://i.ibb.co/Cs5tw17c/e483e6c2-b2fa-4923-b3f6-32a6f39e3714.jpg" alt="Fresh clean laundry">
+          </div>
+        </div>
+        <div class="pcard-glow bleach-glow"></div>
+        <div class="pcard-badge" style="background:linear-gradient(135deg,#6ab4ff,#3a7bd5);color:#fff">New</div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">Hasass Bleach</div>
+        <div class="pcard-desc">Keep your home sparkling clean &amp; germ-free. Disinfects, removes stains, whitens fabrics, and leaves a fresh scent.</div>
+        <div class="pcard-tags">
+          <span class="ptag">Disinfects</span><span class="ptag">Removes Stains</span><span class="ptag">Whitens</span><span class="ptag">Perfumes</span>
+        </div>
+        <div class="pcard-footer">
+          <div class="pcard-price">Starting from<span>Contact Us</span></div>
+          <div id="bleachCtrl"><button class="add-ring" onclick="add('bleach')">+</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-imgs">
+        <div class="img-mosaic three">
+          <div class="mosaic-cell span2">
+            <img src="https://i.ibb.co/67XLq5yS/cf020dce-25db-40b5-99ea-92b8d2c801f4.jpg" alt="Dark red hibiscus drink">
+          </div>
+          <div class="mosaic-cell">
+            <img src="https://i.ibb.co/9384gQKz/91e056ef-85b2-4596-bec5-6a7d540f174d.jpg" alt="Hibiscus flowers">
+          </div>
+          <div class="mosaic-cell">
+            <img src="https://i.ibb.co/9384gQKz/91e056ef-85b2-4596-bec5-6a7d540f174d.jpg" alt="Fresh ginger and spices">
+          </div>
+        </div>
+        <div class="pcard-glow sobolo-glow"></div>
+        <div class="pcard-badge" style="background:linear-gradient(135deg,#c84b6e,#8b1a3a);color:#fff">Organic</div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">Hasass Special Sobolo</div>
+        <div class="pcard-desc">100% organic Sobolo brewed from hibiscus leaves, ginger, cloves &amp; water. The healthy, refreshing Ghanaian way!</div>
+        <div class="pcard-tags">
+          <span class="ptag">100% Organic</span><span class="ptag">No Preservatives</span><span class="ptag">Hibiscus</span><span class="ptag">Healthy</span>
+        </div>
+        <div class="pcard-footer">
+          <div class="pcard-price">Starting from<span>Contact Us</span></div>
+          <div id="soboloCtrl"><button class="add-ring" onclick="add('sobolo')">+</button></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider-bar"></div>
+
+<div class="steps-section">
+  <div class="steps-inner">
+    <div class="sec-label">How It Works</div>
+    <h2 class="sec-h">Order in 4 Easy Steps</h2>
+    <p class="sec-p">Fast, simple, delivered to your door or ready for pickup.</p>
+    <div class="steps-row">
+      <div class="step-card"><div class="step-num">1</div><h3>Pick products</h3><p>Add items to your cart from the collection above.</p></div>
+      <div class="step-card"><div class="step-num">2</div><h3>Fill details</h3><p>Enter your name, location and contact info.</p></div>
+      <div class="step-card"><div class="step-num">3</div><h3>Submit order</h3><p>Your details are sent directly to our WhatsApp.</p></div>
+      <div class="step-card"><div class="step-num">4</div><h3>Receive &amp; enjoy</h3><p>Pick up at Darkuman or arrange delivery with us.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="order-wrap" id="order">
+  <div class="sec-label">Place Your Order</div>
+  <h2 class="sec-h">Ready to Order?</h2>
+  <p class="sec-p" style="margin-bottom:2rem">Fill in your details and we'll confirm via WhatsApp.</p>
+  <div class="order-box">
+    <h2>Order Form</h2>
+    <p class="sub">For bulk purchases, state quantities in the notes field below.</p>
+    <div class="form-grid">
+      <div class="fg"><label>Full Name *</label><input type="text" id="fname" placeholder="Your full name"></div>
+      <div class="fg"><label>WhatsApp / Phone *</label><input type="tel" id="fphone" placeholder="+233 XX XXX XXXX"></div>
+      <div class="fg"><label>Location / Area *</label><input type="text" id="floc" placeholder="e.g. Achimota, Dansoman..."></div>
+      <div class="fg"><label>Delivery Method</label>
+        <select id="fdelivery">
+          <option value="">Select...</option>
+          <option value="pickup">Pickup — 18 Sakumo Street, Darkuman</option>
+          <option value="delivery">Delivery (we'll discuss)</option>
+        </select>
+      </div>
+      <div class="cart-summary-box">
+        <div class="cs-title">🛒 Your Cart</div>
+        <div id="cartItems"><div class="empty-note">No items added yet — click + on a product above!</div></div>
+      </div>
+      <div class="fg full"><label>Notes / Quantities</label><textarea id="fnotes" placeholder="e.g. 5kg shea butter, 3 bottles sobolo, 2 bleach bottles..."></textarea></div>
+      <div class="success-card" id="successCard">
+        <h3>✅ Order Submitted!</h3>
+        <p>We'll contact you on WhatsApp shortly to confirm. You can also reach us at <strong>+233 (0) 549961621</strong>.</p>
+      </div>
+      <button class="submit-gold" onclick="submitOrder()">📱 Send Order via WhatsApp &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<div class="contact-footer" id="contact">
+  <div class="cf-inner">
+    <div class="cf-col">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:1rem">
+        <div class="nav-logo-ring"><span>HN</span></div>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#fff">Hasass <em style="color:var(--gold);font-style:normal">Naturals</em></span>
+      </div>
+      <p>Handcrafted with love in Darkuman, Accra. Proudly Ghanaian.</p>
+    </div>
+    <div class="cf-col">
+      <h4>Find Us</h4>
+      <p>18 Sakumo Street<br>Darkuman, Accra, Ghana</p>
+    </div>
+    <div class="cf-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/233549961621">+233 (0) 549961621</a>
+      <a href="https://www.facebook.com/jawandohasanatu">@jawandohasanatu</a>
+      <p>Facebook &amp; Instagram</p>
+    </div>
+    <div class="cf-col">
+      <h4>Hours</h4>
+      <p>Mon – Sat: 8am – 7pm<br>Sunday: 10am – 4pm</p>
+    </div>
+  </div>
+</div>
+<div class="bottom-bar">
+  <strong>Hasass Naturals</strong> &mdash; Proudly Made in Ghana 🇬🇭 &nbsp;|&nbsp; &copy; 2025 All rights reserved
+</div>
+
+<script>
+var cart={shea:0,bleach:0,sobolo:0};
+var names={shea:'Premium Shea Butter',bleach:'Hasass Bleach',sobolo:'Hasass Special Sobolo'};
+
+function goTo(id){
+  var el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:'smooth'});
+}
+
+function add(k){cart[k]++;render(k);updateCart()}
+function rem(k){if(cart[k]>0){cart[k]--;render(k);updateCart()}}
+
+function render(k){
+  var el=document.getElementById(k+'Ctrl');
+  if(cart[k]===0){
+    el.innerHTML='<button class="add-ring" onclick="add(\''+k+'\')">+</button>';
+  }else{
+    el.innerHTML='<div class="qty-row"><button class="qty-b" onclick="rem(\''+k+'\')">&#8722;</button><span class="qty-v">'+cart[k]+'</span><button class="qty-b" onclick="add(\''+k+'\')">+</button></div>';
+  }
+}
+
+function updateCart(){
+  var total=cart.shea+cart.bleach+cart.sobolo;
+  document.getElementById('cartCount').textContent=total;
+  var html='';var has=false;
+  for(var k in cart){
+    if(cart[k]>0){has=true;html+='<div class="ci"><span>'+names[k]+'</span><span>&times;'+cart[k]+'</span></div>';}
+  }
+  if(has){
+    html+='<div class="ci"><span>Total items</span><span>'+total+' item(s)</span></div>';
+    document.getElementById('cartItems').innerHTML=html;
+  }else{
+    document.getElementById('cartItems').innerHTML='<div class="empty-note">No items added yet — click + on a product above!</div>';
+  }
+}
+
+function submitOrder(){
+  var name=document.getElementById('fname').value.trim();
+  var phone=document.getElementById('fphone').value.trim();
+  var loc=document.getElementById('floc').value.trim();
+  var del=document.getElementById('fdelivery').value;
+  var notes=document.getElementById('fnotes').value.trim();
+  if(!name||!phone||!loc){alert('Please fill in your name, phone number, and location.');return;}
+  var items=[];
+  for(var k in cart){if(cart[k]>0)items.push(cart[k]+'x '+names[k]);}
+  if(!items.length&&!notes){alert('Please add at least one product or describe your order in the notes.');return;}
+  var msg='Hello Hasass Naturals! 👋\n\nNew order:\n\n';
+  msg+='👤 Name: '+name+'\n';
+  msg+='📞 Phone: '+phone+'\n';
+  msg+='📍 Location: '+loc+'\n';
+  if(del)msg+='🚚 Delivery: '+del+'\n';
+  if(items.length)msg+='\n🛒 Items:\n'+items.join('\n')+'\n';
+  if(notes)msg+='\n📝 Notes: '+notes+'\n';
+  msg+='\nThank you!';
+  window.open('https://wa.me/233549961621?text='+encodeURIComponent(msg),'_blank');
+  document.getElementById('successCard').style.display='block';
+}
+</script>
+</body>
+</html>
